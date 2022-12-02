@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import GithubAlt from './icons/github-alt.astro';
 ---
 
 <header class="flex justify-end items-center py-4 px-6">
@@ -7,5 +8,8 @@ import HeaderLink from './HeaderLink.astro';
 		<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/projects">Projects</HeaderLink>
 		<HeaderLink href="mailto:rene@amayamedia.com?subject=Let's Get in touch">Contact</HeaderLink>
+		<a href="https://github.com/Alxmerino/amayamedia.com" target="_blank" title="See this website code">
+			<span class="sr-only">Website repo</span><GithubAlt class="w-5" />
+		</a>
 	</nav>
 </header>
