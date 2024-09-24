@@ -13,16 +13,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="min-h-screen flex flex-col justify-center bg-slate-100 text-md">
+	<body class="bg-gray-900 text-gray-300">
+	<!-- <body class="bg-gray-900 text-gray-300 font-['Inter',sans-serif]"> -->
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DC5DN6"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		
-		<Header />
 
-        <slot></slot>
+		<div class="max-w-4xl mx-auto px-4 py-8">
 		
-		<Footer />
+			<Header />
+
+	        <main>
+		        <slot></slot>
+	        </main>
+			
+			<Footer />
+		</div>
 	</body>
 </html>

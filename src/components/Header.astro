@@ -1,15 +1,20 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import GithubAlt from './icons/github-alt.astro';
+const navigationLinks = [
+  { name: 'About', href: '#about' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
+];
 ---
 
-<header class="flex justify-end items-center py-4 px-6">
-	<nav class="flex space-x-4">
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/projects">Projects</HeaderLink>
-		<HeaderLink href="mailto:rene@amayamedia.com?subject=Let's Get in touch">Contact</HeaderLink>
-		<a href="https://github.com/Alxmerino/amayamedia.com" target="_blank" title="See this website code">
-			<span class="sr-only">Website repo</span><GithubAlt class="w-5" />
-		</a>
-	</nav>
+<header class="flex justify-between items-center mb-16">
+  <a href="#" class="text-2xl font-bold text-blue-400">RM</a>
+  <nav>
+    <ul class="flex space-x-6">
+      {navigationLinks.map((link) => (
+        <li>
+          <a href={link.href} class="text-gray-400 hover:text-white transition-colors">{link.name}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
 </header>
